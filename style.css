@@ -1,0 +1,27 @@
+/*
+ * @Description: 
+ * @Author: Kyeoni hujr
+ * @Date: 2025-05-26 15:55:11
+ * @LastEditors: Kyeoni hujr
+ * @LastEditTime: 2025-05-26 15:55:14
+ */
+ :root {
+    --primary: 12 12 21;
+    --primary-light: 255 255 255;
+    --primary-dark: 12 12 21;
+    --background-light: 255 255 255;
+    --background-dark: 0 0 0;
+    --gray-50: 243 243 243;
+    --gray-100: 238 238 238;
+    --gray-200: 222 222 223;
+    --gray-300: 206 206 206;
+    --gray-400: 158 158 159;
+    --gray-500: 112 112 112;
+    --gray-600: 80 80 80;
+    --gray-700: 62 62 63;
+    --gray-800: 37 37 37;
+    --gray-900: 23 23 23;
+    --gray-950: 10 10 10;
+}
+
+/* 您可以在下方添加更多全局样式或 CSS 变量 */ 
