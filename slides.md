@@ -213,7 +213,7 @@ Agent 是 Cursor 中默认且最自主的模式，旨在以最少的指导处理
       </ul>
     </div>
   </div>
-  
+
   <div class="space-y-6">
     <div class="bg-gradient-to-r from-orange-50 to-pink-50 p-4 rounded-lg border border-orange-200 dark:from-orange-900/20 dark:to-pink-900/20 dark:border-orange-700">
       <h3 class="text-lg font-semibold text-orange-800 dark:text-orange-300 mb-2">💡 最佳实践</h3>
@@ -223,7 +223,7 @@ Agent 是 Cursor 中默认且最自主的模式，旨在以最少的指导处理
         <li>多根工作区支持多项目开发</li>
       </ul>
     </div>
-    
+
   </div>
 </div>
 
@@ -242,6 +242,424 @@ Agent 是 Cursor 中默认且最自主的模式，旨在以最少的指导处理
 - 多根工作区支持
 - 针对大型单体仓库的优化策略
 -->
+
+---
+
+# Rules - 智能上下文规则 📋
+
+通过可重用的作用域指令控制 Agent 模型的行为
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## 🎯 什么是 Rules？
+
+为项目或个人提供持久的上下文、偏好设置或工作流程编码方式
+
+## ⚡ 核心原理
+
+大型语言模型不保留补全之间的记忆，Rules 在提示级别提供持久、可重用的上下文来解决这个问题
+
+</div>
+<div>
+
+## 🔧 适用范围
+
+- Chat 和 ⌘K 模式
+- 代码生成和编辑
+- 工作流程指导
+
+## 📁 规则类型
+
+- 项目规则 (Project Rules)
+- 用户规则 (User Rules)
+- 传统规则 (.cursorrules)
+
+</div>
+</div>
+
+---
+
+# 项目规则 (Project Rules)
+
+存储在 `.cursor/rules` 中，版本控制且范围限定于代码库
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## 🎯 使用场景
+
+- 编码特定领域知识到代码库中
+- 自动化项目特定的工作流程或模板
+- 标准化风格或架构决策
+
+## 📝 规则类型
+
+- **Always:** 总是包含
+- **Auto Attached:** 文件匹配时自动包含
+- **Agent Requested:** AI 决定是否包含
+- **Manual:** 手动触发 @ruleName
+
+</div>
+<div>
+
+## 📄 MDC 格式示例
+
+```yaml
+---
+description: RPC Service boilerplate
+globs: "**/*.service.ts"
+alwaysApply: false
+---
+
+- 使用内部 RPC 模式定义服务
+- 始终使用 snake_case 命名服务
+
+@service-template.ts
+```
+
+## 🔄 创建方式
+
+- ⌘ + Shift + P → "New Cursor Rule"
+- Cursor Settings → Rules
+- Chat 中生成规则
+
+</div>
+</div>
+
+---
+
+# 规则应用场景
+
+不同类型的规则适用于不同的开发需求
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## 🏢 领域特定指导
+
+### 前端组件标准
+- 使用 Tailwind 进行样式设计
+- 使用 Framer Motion 做动画
+- 遵循组件命名约定
+
+### Java 开发规范
+- 禁止使用行尾注释
+- 变量命名使用小驼峰形式
+- 遵循小组内代码风格编写
+
+</div>
+<div>
+
+## 👤 用户规则
+
+### 全局设置示例
+*"请以简洁的风格回复。避免不必要的重复或填充语言。"*
+
+- 在 Cursor 设置中定义
+- 应用于所有项目
+- 纯文本格式
+
+## 🔧 模板和样板
+
+### Express 服务模板
+- 遵循 RESTful 原则
+- 包含错误处理中间件
+- 设置适当的日志记录
+
+### React 组件结构
+- Props 接口在顶部
+- 组件作为命名导出
+- 样式在底部
+
+</div>
+</div>
+
+---
+
+# 最佳实践和技巧
+
+编写高效 Rules 的黄金法则
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## ✅ 最佳实践
+
+- **保持简洁:** 目标 500 行以下
+- **分解概念:** 拆分为多个可组合的规则
+- **提供示例:** 包含具体示例或引用文件
+- **避免模糊:** 像写清晰的内部文档一样
+- **重复使用:** 发现重复提示时就创建规则
+
+## 🎯 聚焦和范围
+
+好的规则是聚焦的、可操作的、并且有明确的作用域。避免过于宽泛的指导，专注于特定的用例和场景。
+
+</div>
+<div>
+
+## 🔄 规则生成和管理
+
+- **Chat 生成:** 使用 /Generate Cursor Rules
+- **版本控制:** 项目规则自动版本控制
+- **文件引用:** 使用 @filename.ts 包含上下文
+
+## ❓ 常见问题
+
+**Q:** 规则没有生效？  
+**A:** 检查规则类型和描述设置
+
+**Q:** 可以引用其他规则吗？  
+**A:** 可以使用 @filename 引用文件
+
+**Q:** 影响 Tab 功能吗？  
+**A:** 不影响，仅用于 Agent 和 ⌘K
+
+</div>
+</div>
+
+---
+
+# @ 符号 - 智能上下文引用 🎯
+
+在 Cursor 中使用 @ 符号引用代码、文件、文档和其他上下文
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## 🚀 基本使用
+
+在 Agent、Ask 和 ⌘K 中输入 `@`，会弹出建议菜单，自动根据输入过滤最相关的建议
+
+### ⌨️ 快捷操作
+- **上/下箭头键** - 浏览建议列表
+- **Enter** - 选择建议
+- **自动过滤** - 根据输入显示相关项目
+
+</div>
+<div>
+
+## 📂 文件和代码
+
+### @Files / @Folders
+- 引用特定文件或整个文件夹
+- 提供文件内容作为上下文
+
+### @Code / @Definitions
+- 引用代码片段或符号定义
+- 精确定位代码库元素 (⌘K 专用)
+
+### @Lint Errors
+- 引用代码检查错误 (Chat 专用)
+- 快速定位和修复问题
+
+</div>
+</div>
+
+---
+
+# @ 符号高级功能
+
+强大的上下文管理和协作工具
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## 📚 文档和版本控制
+
+### @Docs / @Web
+- 访问文档和外部网络资源
+- 扩展知识库范围
+
+### @Git / @Recent Changes
+- 访问 Git 历史和最近变更
+- 追踪代码演进过程
+
+## 🏷️ 特殊符号
+
+### # Files
+- 添加文件到上下文而不直接引用
+
+
+</div>
+<div>
+
+## 📝 协作工具
+
+### @Past Chats
+- 引用之前的对话记录
+- 保持上下文连续性
+
+### @Cursor Rules
+- 引用项目规则和编码规范
+
+## 💡 最佳实践
+
+- **组合使用**: 同时使用多个 @ 符号
+- **常见场景**: @Files + @Git (代码审查)
+- **效率提升**: 熟记快捷键，建立使用习惯
+
+</div>
+</div>
+
+---
+
+# MCP - 模型上下文协议概述 🔌
+
+连接外部工具和数据源到 Cursor 的强大插件系统
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## 🎯 什么是 MCP？
+
+Model Context Protocol (MCP) 是一个**开放式标准协议**，专为大型语言模型设计，解决了 AI 应用与外部数据源和工具集成的标准化问题
+
+### 🚀 核心优势
+- **统一接口** - 一套标准连接所有工具
+- **双向通信** - 工具既可提供数据也可执行操作
+- **实时交互** - 动态获取最新信息
+- **扩展性强** - 支持任何编程语言开发
+
+</div>
+<div>
+
+## 🗺️ 高德地图 MCP 使用流程
+
+### 1. 安装配置
+```bash
+# 安装高德地图 MCP 服务器
+npm install @amap/mcp-server
+```
+
+### 2. 配置文件
+```json
+{
+  "mcpServers": {
+    "amap": {
+      "command": "npx",
+      "args": ["@amap/mcp-server"],
+      "env": {
+        "AMAP_API_KEY": "your_api_key"
+      }
+    }
+  }
+}
+```
+
+### 3. 使用示例
+- 地址解析和地理编码
+- 路径规划和导航
+- 周边搜索（餐厅、医院等）
+- 实时交通信息查询
+
+</div>
+</div>
+
+---
+
+# MCP 工具集成和应用场景 🛠️
+
+丰富的第三方集成，大幅扩展 Cursor 的能力边界
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## 🗄️ 数据库和存储
+
+### 直接数据库访问
+- **PostgreSQL/MySQL** - 无需手动提供 schema
+- **SQLite** - 本地数据快速查询
+- **Redis** - 缓存和会话管理
+- 自动生成查询语句和数据分析
+
+## 🌐 第三方服务
+
+### 开发工具
+- **GitHub** - PR 创建、代码搜索、问题管理
+- **GitLab** - 项目管理和 CI/CD
+
+</div>
+<div>
+
+## 🧠 AI 增强
+
+### 智能功能
+- **Memory** - 长期记忆和上下文保持
+- **Web Search** - 实时信息检索
+- **Code Analysis** - 深度代码理解
+- **Documentation** - 自动文档生成
+
+</div>
+</div>
+
+---
+
+# MCP 配置 ⚙️
+
+文件 ->首选项 ->Cursor Srttings -> MCP
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+### 📂 配置文件
+```json
+// /mcp.json
+{
+  "mcpServers": {
+    "notion": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-notion"],
+      "env": {
+        "NOTION_API_KEY": "secret_xxx"
+      }
+    },
+    "postgres": {
+      "command": "uvx",
+      "args": ["mcp-server-postgres"],
+      "env": {
+        "DATABASE_URL": "postgresql://user:pass@localhost/db"
+      }
+    }
+  }
+}
+```
+
+</div>
+<div>
+
+## 🗺️ 高德地图 MCP 使用流程
+
+#### 1. 安装配置
+```bash
+# 安装高德地图 MCP 服务器
+npm install @amap/mcp-server
+```
+
+#### 2. 配置文件
+```json
+{
+  "mcpServers": {
+    "amap": {
+      "command": "npx",
+      "args": ["@amap/mcp-server"],
+      "env": {
+        "AMAP_API_KEY": "your_api_key"
+      }
+    }
+  }
+}
+```
+
+### 3. 使用示例
+- 地址解析和地理编码
+- 路径规划和导航
+- 周边搜索（餐厅、医院等）
+- 实时交通信息查询
+
+</div>
+</div>
 
 ---
 
