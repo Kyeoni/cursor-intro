@@ -21,7 +21,7 @@ transition: slide-left
 mdc: true
 ---
 
-# Cursor - AI 编程助手
+# Cursor - 您的 AI 编程助手
 
 <div class="text-xl opacity-80">
   让编程更智能、更高效
@@ -33,46 +33,7 @@ mdc: true
 
 ---
 
-# 目录
-
-<h4 style="margin: 0.5em 0;">1. Cursor是什么</h4>
-<h4 style="margin: 0.5em 0;">2. Cursor界面长什么样子</h4>
-<h4 style="margin: 0.5em 0;">3. Cursor怎么用</h4>
-    <div style="color:#888;font-size:0.95em;margin-left:2em;">- Tab智能补全<br>- AI对话</div>
-<h4 style="margin: 0.5em 0;">4. Cursor怎么用得更个性化</h4>
-    <div style="color:#888;font-size:0.95em;margin-left:2em;">- 索引<br>- 规则<br>- MCP插件</div>
-
----
-
-# 1. Cursor是什么
-
-<div class="text-xl mt-6 mb-4 leading-loose">AI驱动的现代代码<span class="text-4xl font-black underline decoration-sky-500">编辑器IDE</
-span></div>
-<ul>
-  <li class="text-lg mb-2">为开发者赋能，提升效率</li>
-  <li class="text-lg mb-2">集成AI补全、对话、自动化等多种能力</li>
-  <li class="text-lg mb-2">支持多种主流语言和框架</li>
-</ul>
-
----
-
-# 2. Cursor界面长什么样子
-
-<div class="grid grid-cols-4 gap-4 h-fit place-content-center">
-
-  <img class="col-span-3" src="./images/cursor-pic.png" />
-
-<ul class="self-center ml-3">
-  <li>文件树</li>
-  <li>编辑区</li>
-  <li>AI侧边栏</li>
-  <li>状态栏与命令面板</li>
-</ul>
-</div>
-
----
-
-# 3. Cursor怎么用？--核心功能概览
+# 核心功能概览
 
 开始探索 Cursor 的 AI 功能：
 
@@ -80,7 +41,7 @@ span></div>
 
 ---
 
-# 3. 核心功能--Tab
+# Tab
 
 <div class="flex items-start gap-x-6 text-left">
   <!-- Video Column -->
@@ -123,9 +84,9 @@ Cursor 不仅能补全代码，还能智能预测您在接受一次编辑后最�
 
 ---
 
-# 核心功能--AI对话--Agent
+# Agent
 
-AI 结对程序员，用于复杂的代码更改。
+您的 AI 结对程序员，用于复杂的代码更改。
 
 <div class="flex items-start gap-x-6 text-left">
   <!-- Video Column -->
@@ -167,9 +128,9 @@ AI 结对程序员，用于复杂的代码更改。
 
 ---
 
-# AI对话模式有哪些
+# Chat/Agent模式
 
-AI对话提供了针对特定任务优化的不同模式：
+聊天提供了针对特定任务优化的不同模式：
 
 <AgentMode />
 
@@ -209,7 +170,7 @@ Agent 是 Cursor 中默认且最自主的模式，旨在以最少的指导处理
 
 ---
 
-# 核心功能--AI对话--内联编辑 (⌘K)
+# 内联编辑 (⌘K)
 
 快速内联代码编辑和生成。
 
@@ -230,17 +191,6 @@ Agent 是 Cursor 中默认且最自主的模式，旨在以最少的指导处理
 + 快速提问
 
  -->
-
----
-
-# 4. Cursor怎么用得更个性化
-
-<ul class="my-8">
-<li class="my-2">代码库索引 🔍</li>
-<li class="my-2">Rules - 智能上下文规则 📋</li>
-<li class="my-2">@ 符号 - 智能上下文引用 🎯</li>
-<li class="my-2">MCP - 模型上下文协议 🔌</li>
-</ul>
 
 ---
 
@@ -308,14 +258,14 @@ Agent 是 Cursor 中默认且最自主的模式，旨在以最少的指导处理
 
 ## ⚡ 核心原理
 
-大型语言模型在补全过程中不会保留记忆。规则通过在提示级别提供持久且可重用的上下文来解决这个问题。
+大型语言模型不保留补全之间的记忆，Rules 在提示级别提供持久、可重用的上下文来解决这个问题
 
 </div>
 <div>
 
 ## 🔧 适用范围
 
-- Chat/Agent 和 ⌘K 模式
+- Chat 和 ⌘K 模式
 - 代码生成和编辑
 - 工作流程指导
 
@@ -328,14 +278,6 @@ Agent 是 Cursor 中默认且最自主的模式，旨在以最少的指导处理
 </div>
 </div>
 
-<!--
-每一次会话都是一次新的会话，不会保留之前的上下文。
-
-规则的意义是 告诉大模型一些一定需要的提示词。应用规则时，规则将包含在模型上下文的开头。
-
-cursorrules（遗产）已弃用，但仍被兼容
- -->
-
 ---
 
 # 项目规则 (Project Rules)
@@ -343,15 +285,15 @@ cursorrules（遗产）已弃用，但仍被兼容
 存储在 `.cursor/rules` 中，版本控制且范围限定于代码库
 
 <div class="grid grid-cols-2 gap-8 mt-8">
-<div class="grid gap-1 mt-1">
+<div>
 
-### 🎯 使用场景
+## 🎯 使用场景
 
 - 编码特定领域知识到代码库中
 - 自动化项目特定的工作流程或模板
 - 标准化风格或架构决策
 
-### 📝 规则类型
+## 📝 规则类型
 
 - **Always:** 总是包含
 - **Auto Attached:** 文件匹配时自动包含
@@ -361,7 +303,7 @@ cursorrules（遗产）已弃用，但仍被兼容
 </div>
 <div>
 
-### 📄 MDC 格式示例
+## 📄 MDC 格式示例
 
 ```yaml
 ---
@@ -376,11 +318,108 @@ alwaysApply: false
 @service-template.ts
 ```
 
-### 🔄 创建方式
+## 🔄 创建方式
 
 - ⌘ + Shift + P → "New Cursor Rule"
 - Cursor Settings → Rules
 - Chat 中生成规则
+
+</div>
+</div>
+
+---
+
+# 规则应用场景
+
+不同类型的规则适用于不同的开发需求
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## 🏢 领域特定指导
+
+### 前端组件标准
+
+- 使用 Tailwind 进行样式设计
+- 使用 Framer Motion 做动画
+- 遵循组件命名约定
+
+### Java 开发规范
+
+- 禁止使用行尾注释
+- 变量命名使用小驼峰形式
+- 遵循小组内代码风格编写
+
+</div>
+<div>
+
+## 👤 用户规则
+
+### 全局设置示例
+
+_"请以简洁的风格回复。避免不必要的重复或填充语言。"_
+
+- 在 Cursor 设置中定义
+- 应用于所有项目
+- 纯文本格式
+
+## 🔧 模板和样板
+
+### Express 服务模板
+
+- 遵循 RESTful 原则
+- 包含错误处理中间件
+- 设置适当的日志记录
+
+### React 组件结构
+
+- Props 接口在顶部
+- 组件作为命名导出
+- 样式在底部
+
+</div>
+</div>
+
+---
+
+# 最佳实践和技巧
+
+编写高效 Rules 的黄金法则
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## ✅ 最佳实践
+
+- **保持简洁:** 目标 500 行以下
+- **分解概念:** 拆分为多个可组合的规则
+- **提供示例:** 包含具体示例或引用文件
+- **避免模糊:** 像写清晰的内部文档一样
+- **重复使用:** 发现重复提示时就创建规则
+
+## 🎯 聚焦和范围
+
+好的规则是聚焦的、可操作的、并且有明确的作用域。避免过于宽泛的指导，专注于特定的用例和场景。
+
+</div>
+<div>
+
+## 🔄 规则生成和管理
+
+- **Chat 生成:** 使用 /Generate Cursor Rules
+- **版本控制:** 项目规则自动版本控制
+- **文件引用:** 使用 @filename.ts 包含上下文
+
+## ❓ 常见问题
+
+**Q:** 规则没有生效？  
+**A:** 检查规则类型和描述设置
+
+**Q:** 可以引用其他规则吗？  
+**A:** 可以使用 @filename 引用文件
+
+**Q:** 影响 Tab 功能吗？  
+**A:** 不影响，仅用于 Agent 和 ⌘K
 
 </div>
 </div>
@@ -407,19 +446,72 @@ alwaysApply: false
 </div>
 <div>
 
-## 部分可用 @ 符号的列表
+## 📂 文件和代码
 
-- @Files——引用项目中的特定文件
+### @Files / @Folders
 
-- @Folders - 引用整个文件夹以获得更广泛的上下文
+- 引用特定文件或整个文件夹
+- 提供文件内容作为上下文
 
-- @Code - 引用代码库中的特定代码片段或符号
+### @Code / @Definitions
 
-- @Docs——访问文档和指南
+- 引用代码片段或符号定义
+- 精确定位代码库元素 (⌘K 专用)
 
-- @Git——访问 git 历史记录和更改
+### @Lint Errors
 
-- @Web——引用外部网络资源和文档
+- 引用代码检查错误 (Chat 专用)
+- 快速定位和修复问题
+
+</div>
+</div>
+
+---
+
+# @ 符号高级功能
+
+强大的上下文管理和协作工具
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+## 📚 文档和版本控制
+
+### @Docs / @Web
+
+- 访问文档和外部网络资源
+- 扩展知识库范围
+
+### @Git / @Recent Changes
+
+- 访问 Git 历史和最近变更
+- 追踪代码演进过程
+
+## 🏷️ 特殊符号
+
+### # Files
+
+- 添加文件到上下文而不直接引用
+
+</div>
+<div>
+
+## 📝 协作工具
+
+### @Past Chats
+
+- 引用之前的对话记录
+- 保持上下文连续性
+
+### @Cursor Rules
+
+- 引用项目规则和编码规范
+
+## 💡 最佳实践
+
+- **组合使用**: 同时使用多个 @ 符号
+- **常见场景**: @Files + @Git (代码审查)
+- **效率提升**: 熟记快捷键，建立使用习惯
 
 </div>
 </div>
@@ -433,71 +525,46 @@ alwaysApply: false
 <div class="grid grid-cols-2 gap-8 mt-8">
 <div>
 
-### 🎯 什么是 MCP？
+## 🎯 什么是 MCP？
 
-Model Context Protocol (MCP) 是一个**开放式标准协议**，它规范了应用程序向 LLM 提供上下文和工具的方式。MCP工具可以理解为 Cursor 的插件系统，它允许您通过标准化接口将 Agent 连接到各种数据源和工具，从而扩展 Agent 的功能。
-
-</div>
-<div>
+Model Context Protocol (MCP) 是一个**开放式标准协议**，专为大型语言模型设计，解决了 AI 应用与外部数据源和工具集成的标准化问题
 
 ### 🚀 核心优势
 
-- **统一接口** - 一套标准连接所有工具和数据源
-- **读写并举** - 既可查询数据也可执行操作命令
-- **实时交互** - 动态获取最新信息和状态
-- **多语言支持** - 支持Python、TypeScript、Java、C#等主流语言开发
+- **统一接口** - 一套标准连接所有工具
+- **双向通信** - 工具既可提供数据也可执行操作
+- **实时交互** - 动态获取最新信息
+- **扩展性强** - 支持任何编程语言开发
 
 </div>
-</div>
-
-<!--
-不使用MCP的话：
-通过提示词 给AI描述前情提要。这就像是你必须当"翻译官"，不断向 AI 解释项目的外部环境。
-
-我的数据结构是什么？第三方服务的配置是什么？我使用了那些外部工具，等等
-
-使用MCP后：
-
-直接连接外部系统，
-不再需要你描述数据库，AI 可以直接访问查看表结构，
-不用解释 API，AI 能直接调用和测试接口
-
-从 "手动描述" 转向 "自动发现"：
-
-Before: 你是信息的搬运工
-
-After: AI 是信息的主动获取者
-
-MCP 让 Cursor 具备了"自我学习项目环境"的能力，而不是依赖你的描述。这样既提高了准确性，也大大减少了沟通成本。
- -->
-
----
-
-# 🗺️ 高德地图 MCP 使用流程
-
-<div class="grid grid-cols-2 gap-8 mt-8">
-
 <div>
 
-### 1. 配置文件
+## 🗺️ 高德地图 MCP 使用流程
 
-https://blog.csdn.net/Dontla/article/details/147577827
+### 1. 安装配置
+
+```bash
+# 安装高德地图 MCP 服务器
+npm install @amap/mcp-server
+```
+
+### 2. 配置文件
 
 ```json
 {
   "mcpServers": {
-    // 基于SSE（Server-Sent Events），服务器发送事件
-    "amap-sse": {
-      "url": "https://mcp.amap.com/sse?key=xxx"
+    "amap": {
+      "command": "npx",
+      "args": ["@amap/mcp-server"],
+      "env": {
+        "AMAP_API_KEY": "your_api_key"
+      }
     }
   }
 }
 ```
 
-</div>
-<div>
-
-### 2. 使用示例
+### 3. 使用示例
 
 - 地址解析和地理编码
 - 路径规划和导航
@@ -506,17 +573,6 @@ https://blog.csdn.net/Dontla/article/details/147577827
 
 </div>
 </div>
-
-<!--
-eg
-
-我想从北京市丰台区东铁匠营街道宋庄路26号院骑行至北京市奥体中心，请帮我规划路线。
-
-哇哦，骑行的时间好长啊。那我还是选择地铁吧，请帮我规划地铁路线。
-
-我希望能用高德地图显示行程。你可以做到吗？
-
- -->
 
 ---
 
@@ -552,14 +608,87 @@ eg
 
 - **Memory** - 长期记忆和上下文保持
 - **Web Search** - 实时信息检索
+- **Code Analysis** - 深度代码理解
+- **Documentation** - 自动文档生成
 
 </div>
 </div>
 
-<!--
+---
 
+# MCP 配置 ⚙️
 
- -->
+文件 ->首选项 ->Cursor Srttings -> MCP
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div>
+
+### 📂 配置文件
+
+```json
+// /mcp.json
+{
+  "mcpServers": {
+    "notion": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-notion"],
+      "env": {
+        "NOTION_API_KEY": "secret_xxx"
+      }
+    },
+    "postgres": {
+      "command": "uvx",
+      "args": ["mcp-server-postgres"],
+      "env": {
+        "DATABASE_URL": "postgresql://user:pass@localhost/db"
+      }
+    }
+  }
+}
+```
+
+</div>
+<div>
+
+## 🗺️ 高德地图 MCP 使用流程
+
+#### 1. 安装配置
+
+```bash
+# 安装高德地图 MCP 服务器
+npm install @amap/mcp-server
+```
+
+#### 2. 配置文件
+
+```json
+{
+  "mcpServers": {
+    "amap": {
+      "command": "npx",
+      "args": ["@amap/mcp-server"],
+      "env": {
+        "AMAP_API_KEY": "your_api_key"
+      }
+    }
+  }
+}
+```
+
+### 3. 使用示例
+
+- 地址解析和地理编码
+- 路径规划和导航
+- 周边搜索（餐厅、医院等）
+- 实时交通信息查询
+
+</div>
+</div>
+
+---
+
+layout: center
+class: text-center
 
 ---
 

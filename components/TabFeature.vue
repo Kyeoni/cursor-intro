@@ -3,7 +3,7 @@
  * @Author: Kyeoni hujr
  * @Date: 2025-05-27 16:03:04
  * @LastEditors: Kyeoni hujr
- * @LastEditTime: 2025-05-28 17:19:48
+ * @LastEditTime: 2025-06-12 11:15:11
 -->
 <template>
 	<!-- <div class="flex items-center">
@@ -30,18 +30,18 @@
 				<div>
 					<h2 class="not-prose font-semibold text-base text-gray-800 dark:text-white mt-4"
 						contenteditable="false" data-component-part="card-title">
-						<font style="vertical-align: inherit;">
-							<font style="vertical-align: inherit;">Tab</font>
-						</font>
+						<span style="vertical-align: inherit;">
+							<span style="vertical-align: inherit;">Tab</span>
+						</span>
 					</h2>
 					<div class="prose mt-1 font-normal text-sm leading-6 text-gray-600 dark:text-gray-400"
 						data-component-part="card-content">
 						<div class="mint-text-sm">
 							<p>
-								<font style="vertical-align: inherit;">
-									<font style="vertical-align: inherit;">Tab 可以预测下一系列编辑。
-									</font>
-								</font>
+								<span style="vertical-align: inherit;">
+									<span style="vertical-align: inherit;">Tab 可以预测下一系列编辑。
+									</span>
+								</span>
 							</p>
 						</div>
 					</div>
@@ -67,18 +67,18 @@
 				<div>
 					<h2 class="not-prose font-semibold text-base text-gray-800 dark:text-white mt-4"
 						contenteditable="false" data-component-part="card-title">
-						<font style="vertical-align: inherit;">
-							<font style="vertical-align: inherit;">Chat/Agent</font>
-						</font>
+						<span style="vertical-align: inherit;">
+							<span style="vertical-align: inherit;">Chat/Agent</span>
+						</span>
 					</h2>
 					<div class="prose mt-1 font-normal text-sm leading-6 text-gray-600 dark:text-gray-400"
 						data-component-part="card-content">
 						<div class="mint-text-sm">
 							<p>
-								<font style="vertical-align: inherit;">
-									<font style="vertical-align: inherit;">AI 结对程序员，可处理复杂的代码修改。使用上下文控制和自动修复功能进行大规模编辑。
-									</font>
-								</font>
+								<span style="vertical-align: inherit;">
+									<span style="vertical-align: inherit;">AI 结对程序员，可处理复杂的代码修改。使用上下文控制和自动修复功能进行大规模编辑。
+									</span>
+								</span>
 							</p>
 						</div>
 					</div>
@@ -104,17 +104,17 @@
 				<div>
 					<h2 class="not-prose font-semibold text-base text-gray-800 dark:text-white mt-4"
 						contenteditable="false" data-component-part="card-title">
-						<font style="vertical-align: inherit;">
-							<font style="vertical-align: inherit;">Cmd-K</font>
-						</font>
+						<span style="vertical-align: inherit;">
+							<span style="vertical-align: inherit;">Cmd-K</span>
+						</span>
 					</h2>
 					<div class="prose mt-1 font-normal text-sm leading-6 text-gray-600 dark:text-gray-400"
 						data-component-part="card-content">
 						<div class="mint-text-sm">
 							<p>
-								<font style="vertical-align: inherit;">
-									<font style="vertical-align: inherit;">快速内联代码编辑和生成。适合在不中断流程的情况下进行精确更改。</font>
-								</font>
+								<span style="vertical-align: inherit;">
+									<span style="vertical-align: inherit;">快速内联代码编辑和生成。适合在不中断流程的情况下进行精确更改。</span>
+								</span>
 							</p>
 						</div>
 					</div>

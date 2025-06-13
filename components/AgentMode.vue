@@ -19,29 +19,29 @@
         <div>
           <h2 class="not-prose font-semibold text-base text-gray-800 dark:text-white mt-4" contenteditable="false"
             data-component-part="card-title">
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">代理模式/Agent</font>
-            </font>
+            <span style="vertical-align: inherit;">
+              <span style="vertical-align: inherit;">代理模式/Agent</span>
+            </span>
           </h2>
           <div class="prose mt-1 font-normal text-sm leading-6 text-gray-600 dark:text-gray-400"
             data-component-part="card-content">
             <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">允许 Cursor</font>
-              </font><strong>
-                <font style="vertical-align: inherit;">
-                  <font style="vertical-align: inherit;">自主学习</font>
-                </font>
+              <span style="vertical-align: inherit;">
+                <span style="vertical-align: inherit;">允许 Cursor</span>
+              </span><strong>
+                <span style="vertical-align: inherit;">
+                  <span style="vertical-align: inherit;">自主学习</span>
+                </span>
               </strong>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">您的代码库，并代表</font>
-                <font style="vertical-align: inherit;">您进行</font>
-              </font><strong>
-                <font style="vertical-align: inherit;">
-                  <font style="vertical-align: inherit;">代码库范围的更改</font>
-                </font>
+              <span style="vertical-align: inherit;">
+                <span style="vertical-align: inherit;">您的代码库，并代表</span>
+                <span style="vertical-align: inherit;">您进行</span>
+              </span><strong>
+                <span style="vertical-align: inherit;">
+                  <span style="vertical-align: inherit;">代码库范围的更改</span>
+                </span>
               </strong>
-              <font style="vertical-align: inherit;"></font>
+              <span style="vertical-align: inherit;"></span>
             </p>
           </div>
         </div>
@@ -66,16 +66,16 @@
         <div>
           <h2 class="not-prose font-semibold text-base text-gray-800 dark:text-white mt-4" contenteditable="false"
             data-component-part="card-title">
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">询问模式/Ask</font>
-            </font>
+            <span style="vertical-align: inherit;">
+              <span style="vertical-align: inherit;">询问模式/Ask</span>
+            </span>
           </h2>
           <div class="prose mt-1 font-normal text-sm leading-6 text-gray-600 dark:text-gray-400"
             data-component-part="card-content">
             <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">获取有关代码库的解释和答案，并使用 AI 规划功能</font>
-              </font>
+              <span style="vertical-align: inherit;">
+                <span style="vertical-align: inherit;">获取有关代码库的解释和答案，并使用 AI 规划功能</span>
+              </span>
             </p>
           </div>
         </div>
@@ -100,16 +100,16 @@
         <div>
           <h2 class="not-prose font-semibold text-base text-gray-800 dark:text-white mt-4" contenteditable="false"
             data-component-part="card-title">
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">手动模式/Manual</font>
-            </font>
+            <span style="vertical-align: inherit;">
+              <span style="vertical-align: inherit;">手动模式/Manual</span>
+            </span>
           </h2>
           <div class="prose mt-1 font-normal text-sm leading-6 text-gray-600 dark:text-gray-400"
             data-component-part="card-content">
             <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">仅使用您提供的上下文进行有针对性的编辑</font>
-              </font>
+              <span style="vertical-align: inherit;">
+                <span style="vertical-align: inherit;">仅使用您提供的上下文进行有针对性的编辑</span>
+              </span>
             </p>
           </div>
         </div>
@@ -135,16 +135,16 @@
         <div>
           <h2 class="not-prose font-semibold text-base text-gray-800 dark:text-white" contenteditable="false"
             data-component-part="card-title">
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">自定义模式/Custom（Beta）</font>
-            </font>
+            <span style="vertical-align: inherit;">
+              <span style="vertical-align: inherit;">自定义模式/Custom（Beta）</span>
+            </span>
           </h2>
           <div class="prose font-normal text-sm text-gray-600 dark:text-gray-400 leading-6 mt-0"
             data-component-part="card-content">
             <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">创建自定义模式以适合您的特定工作流程</font>
-              </font>
+              <span style="vertical-align: inherit;">
+                <span style="vertical-align: inherit;">创建自定义模式以适合您的特定工作流程</span>
+              </span>
             </p>
           </div>
         </div>
